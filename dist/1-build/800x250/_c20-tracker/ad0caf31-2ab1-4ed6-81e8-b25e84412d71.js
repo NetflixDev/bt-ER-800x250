@@ -6,11 +6,10 @@ if (typeof module === 'undefined') {
 module.exports = {
   "id": "ad0caf31-2ab1-4ed6-81e8-b25e84412d71",
   "name": "bt-ER-800x250",
-  "label": "Right Corner",
   "description": "C20/Monet-compatible templates that use  https://github.com/ff0000-ad-tech/ad-docs/blob/master/README.md",
   "type": "build_templates",
   "builder": {
-    "label": "800x250",
+    "label": "800x250 NF Global Template",
     "tier": "endframe-resolve",
     "size": "800x250",
     "creative": "./dist/3-traffic/default/800x250",
@@ -25,7 +24,7 @@ module.exports = {
   },
   "context": "RED Interactive",
   "state": "published",
-  "updated": 1556669339383,
+  "updated": 1556672789397,
   "username": "GitHub",
   "full_name": "NetflixDev/bt-ER-800x250",
   "html_url": "https://github.com/NetflixDev/bt-ER-800x250",

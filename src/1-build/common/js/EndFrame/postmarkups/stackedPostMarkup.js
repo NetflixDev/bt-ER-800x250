@@ -24,7 +24,6 @@ export default function stackedPostMarkup() {
 		}
 	})
 
-	/*-- Red.Component.cta_against_logo.start --*/
 	// cta
 	T.cta.resize()
 
@@ -41,7 +40,6 @@ export default function stackedPostMarkup() {
 		}
 	})
 
-	/*-- Red.Component.cta_against_logo.end --*/
 	if (adData.hasFTM) {
 		// free trial messaging
 		Styles.setCss(T.ftm, {
@@ -91,7 +89,6 @@ export default function stackedPostMarkup() {
 		children
 	})
 
-	/*-- Red.Component.cta_logo_lockup_align.start --*/
 	Align.set(T.ctaLogoLockup, {
 		x: {
 			type: Align.RIGHT,
@@ -99,8 +96,6 @@ export default function stackedPostMarkup() {
 		},
 		y: Align.CENTER
 	})
-
-	/*-- Red.Component.cta_logo_lockup_align.end --*/
 
 	if (T.iris) {
 		// ensure iris canvas drawer in front of everything

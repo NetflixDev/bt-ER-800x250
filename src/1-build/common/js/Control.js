@@ -69,13 +69,9 @@ export class Control {
 						ttUrl = 'title-treatments/tt-right.png'
 						ttCenter = { x: 610, y: 80 }
 						break
-					case 'STACKED_LEFT':
+					case 'STACKED':
 						ttUrl = 'title-treatments/tt-stacked-left.png'
 						ttCenter = { x: 190, y: 125 }
-						break
-					case 'STACKED_CENTER':
-						ttUrl = 'title-treatments/tt-stacked-center.png'
-						ttCenter = { x: 400, y: 125 }
 						break
 				}
 

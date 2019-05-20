@@ -2,7 +2,7 @@
   "name": "src",
   "build_size": "800x250",
   "build_source": {
-    "build_source_path": "./c20-builder-800x250/"
+    "build_source_path": "./c20-builder/c20-builder-800x250/"
   },
   "build_source_options": {
     "stub_paths": []
@@ -10,7 +10,7 @@
   "output": "/Users/derek.miranda/Internal/c20/build-templates/bt-ER-800x250",
   "filters": {},
   "id": "Container 2.0 - 800x250",
-  "bsid": "e088e22c-8958-4aed-a16d-7b9cdd9462eb",
+  "bsid": "f62f4b2f-0d23-4539-9bd6-b18b662ab607",
   "processing": false,
   "error": false
 }

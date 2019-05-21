@@ -9,7 +9,6 @@ import { mainInit } from './EndFrame/inits'
 import { Animation } from '@common/js/Animation.js'
 import { Control } from '@common/js/Control.js'
 import '@netflixadseng/wc-netflix-flushed-ribbon'
-import '@netflixadseng/wc-netflix-video'
 import { UIComponent, UIBorder, UIButton, UIImage, TextFormat, UITextField, UISvg } from 'ad-ui'
 import { ObjectUtils } from 'ad-utils'
 
@@ -41,6 +40,40 @@ export function Intro(arg) {
 	}
 	const T = new UIComponent(ObjectUtils.defaults(arg, base, true))
 
+	// video
+	T.introVideoPlayer = document.createElement('netflix-video')
+	T.introVideoPlayer.id = 'intro-video'
+	T.introVideoPlayer.setAttribute('width', adParams.adWidth)
+	T.introVideoPlayer.setAttribute('height', adParams.adHeight)
+	T.introVideoPlayer.setAttribute('close-color-1', adData.colors.red)
+	T.introVideoPlayer.setAttribute('close-color-2', adData.colors.white)
+	T.introVideoPlayer.setAttribute('data-dynamic-key', 'Supercut')
+	T.introVideoPlayer.setAttribute('muted', '')
+	//T.introVideoPlayer.setAttribute('autoplay', '')
+	T.introVideoPlayer.addEventListener('video-click', Control.handleIntroClick)
+	T.introVideoPlayer.addEventListener('video-complete', Control.handleIntroVideoComplete)
+	T.introVideoPlayer.addEventListener('video-close', Animation.showEndFrame)
+	T.appendChild(T.introVideoPlayer)
+
+	// brand logo
+	T.netflixLogo = document.createElement('netflix-brand-logo')
+	T.netflixLogo.setAttribute('width', 90)
+	T.appendChild(T.netflixLogo)
+
+	T.postMarkupStyling = function() {
+		Styles.setCss(View.intro.netflixLogo, { opacity: 0 })
+		Align.set(View.intro.netflixLogo, {
+			x: {
+				type: Align.LEFT,
+				offset: 10
+			},
+			y: {
+				type: Align.BOTTOM,
+				offset: -10
+			}
+		})
+	}
+
 	return T
 }
 
@@ -69,8 +102,7 @@ export function EndFrame(arg) {
 		default:
 			postMarkup = rightPostMarkup
 			break
-		case 'STACKED_LEFT':
-		case 'STACKED_CENTER':
+		case 'STACKED':
 			postMarkup = stackedPostMarkup
 			break
 	}

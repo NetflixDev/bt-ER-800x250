@@ -4,7 +4,14 @@ import '@netflixadseng/wc-netflix-text'
 import '@netflixadseng/wc-netflix-img'
 import { Styles, Markup, Align, Effects } from 'ad-view'
 import { ImageManager } from 'ad-control'
-import { stackedPostMarkup, centerPostMarkup, leftPostMarkup, rightPostMarkup } from './EndFrame/postMarkups'
+import {
+	offCenterRightPostMarkup,
+	rightPostMarkup,
+	leftPostMarkup,
+	stackedPostMarkup,
+	centerPostMarkup,
+	offCenterLeftPostMarkup
+} from './EndFrame/postMarkups'
 import { mainInit } from './EndFrame/inits'
 import { Animation } from '@common/js/Animation.js'
 import { Control } from '@common/js/Control.js'

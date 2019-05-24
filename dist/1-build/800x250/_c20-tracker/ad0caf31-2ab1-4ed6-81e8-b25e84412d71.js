@@ -23,7 +23,7 @@ module.exports = {
   },
   "context": "RED Interactive",
   "state": "published",
-  "updated": 1558381634179,
+  "updated": 1558654020712,
   "username": "GitHub",
   "full_name": "NetflixDev/bt-ER-800x250",
   "html_url": "https://github.com/NetflixDev/bt-ER-800x250",

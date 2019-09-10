@@ -10,8 +10,8 @@ const {
 } = createSideBySidePostMarkups({
   defaultArgs: {
     ctaLogoOffset: 14,
-    headlineFontSize: 18,
-    headlineLockupOffset: 8
+    tuneInFontSize: 18,
+    tuneInLockupOffset: 8
   },
   yAlign: {
     type: Align.BOTTOM,
@@ -34,7 +34,7 @@ function stackedPostMarkup() {
   horizontalStacked({
     brandingLockupOffset: 16,
     brandingLockupRightPadding: 30,
-    headlineFontSize: 18
+    tuneInFontSize: 18
   });
 }
 
